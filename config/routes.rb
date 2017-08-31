@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  #root "classrooms#index"
-  root to: "users#index"
 
+root "classrooms#index"
 
-#clasrooms routes
+#Clasrooms routes
  get "/classrooms", to: "classrooms#index", as: "classrooms"
 
 #Users routes
@@ -13,6 +12,8 @@ Rails.application.routes.draw do
 
 #Sessions routes
   get '/login', to: 'sessions#new'
-
+  
+ #Post routes
+  get "/posts", to: "posts#index", as: "posts"
 
 end

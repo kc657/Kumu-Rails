@@ -7,3 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Classroom.create({name: "Puppy Training", description: "Train your puppy into becoming a Jedi"})
 Classroom.create({name: "Basket Weaving", description: "There is no greater thrill"})
+
+Post.create({name: "Choosing The Proper Yarn Carefully", description: "Not all Yarns are created equal", url: "www.google.com"})
+Post.create({name: "Best styles of Puppy Lightsabers", description: "Don't go with the red one.", url: "www.google.com"})
