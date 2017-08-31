@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
-  root "classrooms#index"
+  #root "classrooms#index"
+  root to: "users#index"
 
-  get "/classrooms", to: "classrooms#index", as: "classrooms"
+
+#clasrooms routes
+ get "/classrooms", to: "classrooms#index", as: "classrooms"
+
+#Users routes
+  get '/users/new', to: 'users#new', as: 'new_user'
   get "/users", to: "users#index", as: "users"
+  post '/users', to: 'users#create'
+
+#Sessions routes
+  get '/login', to: 'sessions#new'
+
+
 end
