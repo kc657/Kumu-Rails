@@ -17,18 +17,24 @@
           <li>
             <a href="#">About Us</a>
           </li>
-          <li>
-            <a href="#">Sign up</a>
-          </li>
-          <li>
-            <a href="#">Log In</a>
-          </li>
+          <% if current_user %>
+            <li><%= link_to "Profile", users_path(current_user) %></li>
+            <li><%= link_to "Log Out", logout_path %></li>
+          <% else %>
+            <li><%= link_to "Create Account", new_user_path %></li>
+            <li><%= link_to "Log In", login_path %></li>
+          <% end %>
         </ul>
       </div>
     </nav>
     <div class="container">
       <div class="row">
         <div class="col m6 offset-m3">
+          <% flash.each do |name, msg| %>
+            <p>
+              <small> <%= name.capitalize %>: <%= msg %> </small>
+            </p>
+          <% end %>
           <%= yield %>
         </div>
       </div>
