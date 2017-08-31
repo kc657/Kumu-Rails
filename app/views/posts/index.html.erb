@@ -1,0 +1,34 @@
+<div class="container center-align">
+
+  <!-- Dropdown Trigger -->
+ <a class='dropdown-button btn-flat white grey-text text-darken-2' href='#' data-activates='dropdown1'>Filter By</a>
+
+ <!-- Dropdown Structure -->
+ <ul id='dropdown1' class='dropdown-content'>
+   <li><a class="grey-text text-darken-2" href="#!"><i class="material-icons ">thumb_up</i>Votes</a></li>
+   <li><a class="grey-text text-darken-2" href="#!"><i class="material-icons ">access_time</i>Time</a></li>
+   <li><a class="grey-text text-darken-2" href="#!"><i class="material-icons ">person</i>Yours</a></li>
+ </ul>
+</div>
+<% @posts.each do |post| %>
+<div class="row card #fafafa hoverable">
+  <div class="col m1 center-align">
+    <button class= "waves-effect waves-green btn-flat">
+        <i class= "material-icons clear">arrow_upward</i>
+    </button>
+  </div>
+    <div class="col m11 card-content black-text">
+      <h5 class="title">
+      <a href="http://<%= post.url %>"> <%= post.name %></a><br>
+    </h5>
+      <p class="grey-text text-darken-3">
+        <%= post.description %>
+      </p>
+    </div>
+    <div class="col m1 center-align">
+      <button class= "waves-effect waves-red btn-flat">
+          <i class= "material-icons clear">arrow_downward</i>
+      </button>
+    </div>
+</div>
+<% end %>
