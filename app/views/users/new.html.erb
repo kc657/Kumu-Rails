@@ -1,0 +1,23 @@
+<h4>thanks for choosing</h4>
+<h1><strong>KUMU</strong></h1>
+</br>
+<hr>
+Sign Up
+<hr>
+</br>
+
+<%= form_for @user do |f| %>
+  <div>
+    <%= f.text_field :first_name, placeholder: "First Name" %>
+  </div>
+  <div>
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
+  </div>
+  <div>
+    <%= f.text_field :username, placeholder: "Email" %>
+  </div>
+  <div>
+    <%= f.password_field :password, placeholder: "Password" %>
+  </div>
+  <%= f.submit "Kumu Up" %>
+<% end %>
