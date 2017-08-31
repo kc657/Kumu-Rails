@@ -1,6 +1,25 @@
-<% @classrooms.each do |classroom| %>
-  <p>
-    <strong>Name:</strong> <%= classroom.name %><br>
-    <strong>Description:</strong> <%= classroom.description %>
-  </p>
-<% end %>
+<div class='container-fluid'>
+  <div class='row header'></div>
+  <div class='row header'></div>
+  <div class='col m6 offset-m1'>
+    <div class='logo'>
+
+      <h1>
+        <strong>Kumu</strong>
+      </h1>
+      <p class='define'>
+        Crowd source your notes
+      </p>
+    </div>
+  </div>
+  <div>
+    <div class='col s8 offset-s3 col m8 offset-m1'>
+      <div class='box'>
+        <input type='search' class='form-control gif-input' name='q' value='' id='search' placeholder='Search Notes...'/>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</div>
