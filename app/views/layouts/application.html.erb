@@ -9,29 +9,6 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">
-          <i class="material-icons">cloud</i>Kumu</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li>
-            <a href="#">About Us</a>
-          </li>
-          <li>
-            <a href="#">Sign up</a>
-          </li>
-          <li>
-            <a href="#">Log In</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col m6 offset-m3">
-          <%= yield %>
-        </div>
-      </div>
-    </div>
+    <%= yield %>
   </body>
 </html>
