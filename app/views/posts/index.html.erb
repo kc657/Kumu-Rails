@@ -1,7 +1,18 @@
 <% @posts.each do |post| %>
-  <p>
-    <a href="<%= post.url %>"> <%= post.name %></a><br>
-    <%= post.description %><br>
-    <br>
-  </p>
+<div class="row card #fafafa hoverable">
+  <div class="col m1 center-align">
+    <button class= "material-icons white">arrow_upward</button>
+  </div>
+    <div class="col m11 card-content black-text">
+      <h5 class="title">
+      <a href="http://<%= post.url %>"> <%= post.name %></a><br>
+    </h5>
+      <p>
+        <%= post.description %>
+      </p>
+    </div>
+    <div class="col m1 center-align">
+      <button class= "material-icons white">arrow_downward</button>
+    </div>
+</div>
 <% end %>
