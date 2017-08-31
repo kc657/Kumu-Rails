@@ -5,7 +5,11 @@ Rails.application.routes.draw do
 #clasrooms routes
 #  get "/classrooms", to: "classrooms#index", as: "classrooms"
 
-#new user signup
+#Users routes
   get '/users/new', to: 'users#new', as: 'new_user'
   post '/users', to: 'users#create'
+
+#Sessions routes
+  get '/login', to: 'sessions#new'
+
 end

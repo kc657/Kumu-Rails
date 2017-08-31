@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col m6 offset-m3">
+      
+<h4>welcome back to</h4>
+<h1><strong>KUMU</strong></h1>
+</br>
+<hr>
+Log In
+<hr>
+</br>
+
+<%= form_for @user, url: "/sessions", method: "post" do |f| %>
+  <div>
+    <%= f.text_field :username, placeholder: "Email" %>
+  </div>
+  <div>
+    <%= f.password_field :password, placeholder: "Password" %>
+  </div>
+  <%= f.submit "Kumu In" %>
+<% end %>
