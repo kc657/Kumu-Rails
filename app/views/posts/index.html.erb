@@ -1,7 +1,9 @@
 <% @posts.each do |post| %>
 <div class="row card #fafafa hoverable">
   <div class="col m1 center-align">
-    <button class= "material-icons white">arrow_upward</button>
+    <button class= "waves-effect waves-green btn-flat">
+        <i class= "material-icons clear">arrow_upward</i>
+    </button>
   </div>
     <div class="col m11 card-content black-text">
       <h5 class="title">
@@ -12,7 +14,9 @@
       </p>
     </div>
     <div class="col m1 center-align">
-      <button class= "material-icons white">arrow_downward</button>
+      <button class= "waves-effect waves-red btn-flat">
+          <i class= "material-icons clear">arrow_downward</i>
+      </button>
     </div>
 </div>
 <% end %>
