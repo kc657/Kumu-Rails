@@ -9,35 +9,6 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">
-          <i class="material-icons">cloud</i>Kumu</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li>
-            <a href="#">About Us</a>
-          </li>
-          <% if current_user %>
-            <li><%= link_to "Profile", users_path(current_user) %></li>
-            <li><%= link_to "Log Out", logout_path %></li>
-          <% else %>
-            <li><%= link_to "Create Account", new_user_path %></li>
-            <li><%= link_to "Log In", login_path %></li>
-          <% end %>
-        </ul>
-      </div>
-    </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col m6 offset-m3">
-          <% flash.each do |name, msg| %>
-            <p>
-              <small> <%= name.capitalize %>: <%= msg %> </small>
-            </p>
-          <% end %>
-          <%= yield %>
-        </div>
-      </div>
-    </div>
+    <%= yield %>
   </body>
 </html>
