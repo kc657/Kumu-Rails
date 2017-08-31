@@ -11,8 +11,12 @@ Rails.application.routes.draw do
 
   #Sessions routes
   get '/login', to: 'sessions#new'
-  
+
   #Post routes
   get '/posts', to: 'posts#index', as: 'posts'
+  get '/posts/new', to: 'posts#new', as: 'new_post'
+  post '/posts', to: 'posts#create'
+
+  # delete '/posts',
 
 end
