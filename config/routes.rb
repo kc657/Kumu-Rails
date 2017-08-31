@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   #Users routes
   get '/users/new', to: 'users#new', as: 'new_user'
-  get '/users', to: "users#index", as: 'users'
+  get '/users/:id', to: "users#show", as: 'user'
   post '/users', to: 'users#create'
 
   #Sessions routes
