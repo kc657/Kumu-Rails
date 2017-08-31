@@ -1,24 +1,32 @@
-<div class='container-fluid'>
-  <div class='row header'></div>
-  <div class='row header'></div>
-  <div class='col m6 offset-m1'>
-    <div class='logo'>
-      <h1>
-        <strong>Kumu</strong>
-      </h1>
-      <p class='define'>
-        Crowd source your notes
-      </p>
-    </div>
-  </div>
-  <div>
-    <div class='col s8 offset-s3 col m8 offset-m1'>
-      <div class='box'>
-        <input type='search' class='form-control gif-input' name='q' value='' id='search' placeholder='Search Notes...'/>
+<div class='navbar-fixed heroImage'>
+  <nav class='transparent z-depth-0'>
+    <div class='nav-wrapper'>
+      <div class='row'>
+        <div class='col s12'>
+          <a href='#' data-activates='mobile-demo' class='button-collapse show-on-large'><i class='material-icons'>menu</i></a>
+          <a href='#' class='brand-logo' target='_blank'>Chalkchain</a>
+          <ul class='right hide-on-med-and-down'>
+            <li><a href='#' target='_blank'>About Us</a></li>
+            <% if current_user %>
+              <li><%= link_to "Profile", users_path(current_user) %></li>
+              <li><%= link_to "Log Out", logout_path %></li>
+            <% else %>
+              <li><%= link_to "Create Account", new_user_path %></li>
+              <li><%= link_to "Log In", login_path %></li>
+            <% end %>
+          </ul>
+        </div>
       </div>
-
+      <ul class='side-nav' id='mobile-demo'>
+        <li><a href='#' target='_blank'>About Us</a></li>
+        <% if current_user %>
+          <li><%= link_to "Profile", users_path(current_user) %></li>
+          <li><%= link_to "Log Out", logout_path %></li>
+        <% else %>
+          <li><%= link_to "Create Account", new_user_path %></li>
+          <li><%= link_to "Log In", login_path %></li>
+        <% end %>
+      </ul>
     </div>
-  </div>
-
-</div>
+  </nav>
 </div>
