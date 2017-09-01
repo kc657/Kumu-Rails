@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   #Home route
   get 'home/index'
 
-  #Clasrooms routes
+  #Classrooms routes
   get '/classrooms', to:'classrooms#index', as: 'classrooms'
 
   #Users routes
@@ -22,9 +22,11 @@ Rails.application.routes.draw do
 
   #Post routes
   get '/posts', to: 'posts#index', as: 'posts'
-  get '/posts/new', to: 'posts#new', as: 'new_post'
+  get '/posts/:id', to: 'posts#show', as: 'post'
+  get '/posts/:id/edit', to: 'posts#edit', as: 'edit_post'
+  get '/post/new', to: 'posts#new', as: 'new_post'
   post '/posts', to: 'posts#create'
-
-  # delete '/posts',
+  patch '/posts/:id', to: 'posts#update'
+  delete '/posts/:id', to: 'posts#destroy'
 
 end
