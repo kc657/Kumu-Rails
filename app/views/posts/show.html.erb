@@ -2,8 +2,11 @@
 <div class="row grey lighten-4 z-depth-3">
   <h3 class="left-align container"><%= @post.name %></h3>
   <div class="container">
-    <h5><a href="http://<%= @post.url %>"><%= @post.url%></a></h5>
-    <p><%= markdown(@post.description) %></p>
+      <h5><%= @post.description %></h5>
+      <h5><a href="http://<%= @post.url %>"><%= @post.url%></a></h5>
+    <div class="top class white"
+      <p><%= markdown(@post.content) %></p>
+    </div>
 </div>
 <div class="center-align">
 <%= link_to "View All Posts", posts_path, class:"btn-flat"%>

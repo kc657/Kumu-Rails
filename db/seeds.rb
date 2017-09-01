@@ -10,3 +10,12 @@ Classroom.create({name: "Basket Weaving", description: "There is no greater thri
 
 Post.create({name: "Choosing The Proper Yarn Carefully", description: "Not all Yarns are created equal", url: "news.ycombinator.com/news"})
 Post.create({name: "Best styles of Puppy Lightsabers", description: "Don't go with the red one.", url: "www.reddit.com/r/explainlikeimfive/"})
+Post.create({name: "Markdown Test", description:"This is a Markdown TEST!",content: "# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+", url: "www.reddit.com/r/explainlikeimfive/"})

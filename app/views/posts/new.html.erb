@@ -6,9 +6,10 @@
     <%= f.text_field :name %>
     <h5>Add Link:</h5>
     <%= f.text_field :url %>
-    <h5>Description:</h5>
-
-    <%= f.text_area :description, class:"materialize-textarea"%>
+    <h5>Add Description:</h5>
+    <%= f.text_field :description %>
+    <h5>Content:</h5>
+    <%= f.text_area :content, class:"materialize-textarea"%>
     <div class="center-align">
       <%= f.submit "Submit", class:"btn-flat"%>
       <br />
