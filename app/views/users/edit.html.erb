@@ -1,0 +1,20 @@
+<%= form_for @user do |f| %>
+<div class="grey lighten-4 z-depth-3">
+  <div class="container">
+    <h3 class="center-align">Edit Profile</h3>
+    <div>
+      <h5>Last Name:</h5>
+      <%= f.text_field :last_name %>
+      <h5>Password:</h5>
+      <%= f.text_field :password_digest, value: nil, placeholder: "update password" %>
+      <h5>Bio:</h5>
+      <%= f.text_area :bio, class:"materialize-textarea"%>
+    </div>
+    <div class="center-align">
+      <%= f.submit "Update Profile", class:"btn-flat"%>
+      <%= link_to "Back", @user, class:"btn-flat"%>
+      <br/>
+    </div>
+  </div>
+</div>
+<% end %>

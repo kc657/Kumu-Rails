@@ -1,26 +1,90 @@
 @import "materialize";
 @import "materialize/extras/nouislider";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
-@import  "https://fonts.googleapis.com/css?family=Fredericka+the+Great";
-
+@import "https://fonts.googleapis.com/css?family=Fredericka+the+Great";
 
 .navbar-fixed {
   position: absolute;
-  z-index:999999999;
+  z-index: 999999999;
 }
 
 .heroImage {
-  background-image: url(blackboard_two.jpg);
+  background-image: url(board_logo_wide.jpg);
   background-size: fill;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
   width: 100vw;
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 50vw
+  font-family: "Fredericka the Great", cursive;
+  font-size: 50vw;
 }
-
 
 .tester2 {
   border: 2px solid red;
+}
+
+// <-- USER PROFILE PAGE -->
+
+.classrooms {
+  position: relative;
+  left: 3%;
+}
+.find {
+  width: 10%;
+}
+.main-content {
+  position: relative;
+  bottom: 325px;
+}
+.user-img {
+  text-align: center;
+  position: relative;
+  bottom: 195px;
+}
+.user-hr {
+  width: 120%;
+  position: relative;
+  right: 50px;
+  margin-top: 10px;
+  bottom: 280px;
+}
+.stats {
+  text-align: center;
+  position: relative;
+  bottom: 240px;
+}
+.info-box {
+  position: relative;
+  width: 30%;
+}
+.info-center {
+  text-align: center;
+  position: relative;
+  left: 34.8%;
+  bottom: 350px;
+}
+.user-hr {
+  width: 40%;
+  position: relative;
+  text-align: center;
+}
+.stats {
+  text-align: center;
+}
+.bio {
+  float: left;
+}
+.edit-profile {
+  text-align: center;
+  position: relative;
+  right: 8%;
+}
+.specific-stats {
+  position: relative;
+  left: 42%;
+  margin-top: 35px;
+}
+.user-html {
+  font-size: 100%;
+  overflow-x: hidden;
 }
