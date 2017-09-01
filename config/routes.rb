@@ -4,14 +4,14 @@ Rails.application.routes.draw do
 
   #Home route
   get 'home/index'
-  
+
   #Clasrooms routes
   get '/classrooms', to:'classrooms#index', as: 'classrooms'
 
   #Users routes
   get '/users/new', to: 'users#new', as: 'new_user'
-  get '/users/:id', to: "users#show", as: 'user'
-  get '/users/:id/edit', to: "users#edit", as: 'edit_user'
+  get '/users/:id', to: 'users#show', as: 'user'
+  get '/users/:id/edit', to: 'users#edit', as: 'edit_user'
   post '/users', to: 'users#create'
   patch '/users/:id', to: 'users#update'
 
