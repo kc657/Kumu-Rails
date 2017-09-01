@@ -27,7 +27,7 @@
       <ul class='side-nav' id='mobile-demo'>
         <li><a href='#' target='_blank'>About Us</a></li>
         <% if current_user %>
-          <li><%= link_to "Profile", users_path(current_user) %></li>
+          <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
           <li><%= link_to "Log Out", logout_path %></li>
         <% else %>
           <li><%= link_to "Create Account", new_user_path %></li>
@@ -46,7 +46,7 @@
           <h5 class="header col s12 light white-text">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. </h5>
         </div>
         <div class="row center">
-          <a href="#" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+          <a href="/login" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
         </div>
         <br><br>
 
@@ -75,7 +75,7 @@
             <h2 class="center brown-text"><i class="material-icons">group</i></h2>
             <h5 class="center">Random title goes here</h5>
 
-            <p class="light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. </p>
+            <p class="light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. </p>
           </div>
         </div>
 
@@ -84,7 +84,7 @@
             <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
             <h5 class="center">Random title goes here</h5>
 
-            <p class="light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. </p>
+            <p class="light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. </p>
           </div>
         </div>
       </div>
@@ -97,11 +97,11 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. </h5>
+          <h5 class="header col s12 light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. </h5>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="assets/background2.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="assets/parallax2.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
   <div class="container">
@@ -111,7 +111,7 @@
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4>Contact Us</h4>
-          <p class="left-align light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. </p>
+          <p class="left-align light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. </p>
         </div>
       </div>
 
@@ -127,7 +127,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="assets/background3.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src="assets/parallax1.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
   <footer class="page-footer teal">
