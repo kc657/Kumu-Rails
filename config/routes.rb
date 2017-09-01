@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  root 'classrooms#index'
 
+  root 'home#index'
+
+  #Home route
+  get 'home/index'
+  
   #Clasrooms routes
   get '/classrooms', to:'classrooms#index', as: 'classrooms'
 
