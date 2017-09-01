@@ -1,6 +1,16 @@
 <head>
 </head>
 <body>
+  <nav>
+    <div class="nav-wrapper" style="background-color:lightblue">
+      <a href="#" class="brand-logo">KUMU</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
   <h2 class="center-align"> Welcome, <%= @user.first_name.capitalize %>! </h2>
 <div class = "classrooms">
   <h3>Classrooms:</h3><br/>
@@ -37,4 +47,7 @@
   <br/>
   <hr class = "user-hr"/>
   <h4 class = "stats">Achievements / stats:</h4>
+<div class ="edit-profile">
+  <%= link_to "Edit Profile", "#{current_user[:id]}/edit" %>
+</div>
 </body>
