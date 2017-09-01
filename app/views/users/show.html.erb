@@ -1,32 +1,32 @@
 <head>
 </head>
-<body>
+<body class = "user-html">
   <nav>
     <div class="nav-wrapper" style="background-color:lightblue">
       <a href="#" class="brand-logo">KUMU</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">About Us</a></li>
+        <li><a href="/logout">Logout</a></li>
       </ul>
     </div>
   </nav>
   <h2 class="center-align"> Welcome, <%= @user.first_name.capitalize %>! </h2>
-<div class = "classrooms">
-  <h3>Classrooms:</h3><br/>
-  <button class="btn btn-large blue">class1</button>
-  <br/><br/>
-  <button class="btn btn-large blue">class2</button>
-  <br/></br>
-  <button class="btn btn-large blue">class3</button><br/><br/>
+  <div class = "classrooms">
+    <h3>Classrooms:</h3><br/>
+    <button class="btn btn-large blue">class1</button>
+    <br/><br/>
+    <button class="btn btn-large blue">class2</button>
+    <br/></br>
+    <button class="btn btn-large blue">class3</button><br/><br/>
 
-  <form class = "input-field find">
-    <div>
-      <input type="text" id="name">
-      <label class="active" for="name">join or create classroom</label>
-    </div>
-  </form>
-</div>
+    <form class = "input-field find">
+      <div>
+        <input type="text" id="name">
+        <label class="active" for="name">join or create classroom</label>
+      </div>
+    </form>
+  </div>
   <br/>
   <br/>
   <div style = "class = row main-content">
@@ -39,15 +39,19 @@
       <div class = "info-box">
         <ul>
           <li class="bio"><h5>Bio: <%= @user.bio %></h5></li>
-
         </ul>
       </div>
     </div>
   </div>
   <br/>
   <hr class = "user-hr"/>
-  <h4 class = "stats">Achievements / stats:</h4>
-<div class ="edit-profile">
-  <%= link_to "Edit Profile", "#{current_user[:id]}/edit" %>
-</div>
+  <div class = "stats">
+    <h4>Achievements / stats:</h4>
+    <ul class = "specific-stats">
+      <li class="bio">User Since: <%= @user.created_at.strftime("%B %d, %Y") %></li>
+    </ul>
+  </div>
+  <div class ="edit-profile">
+    <%= link_to "Edit Profile", "#{current_user[:id]}/edit" %>
+  </div>
 </body>
