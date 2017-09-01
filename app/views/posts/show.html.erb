@@ -1,0 +1,11 @@
+
+<div class="row grey lighten-4 z-depth-3">
+  <h3 class="left-align container"><%= @post.name %></h3>
+  <div class="container">
+    <h5><a href="http://<%= @post.url %>"><%= @post.url%></a></h5>
+    <p><%= @post.description %></p>
+</div>
+<div class="center-align">
+<%= link_to "View All Posts", posts_path, class:"btn-flat"%>
+<%= button_to "Delete", @post, method: :delete %>
+</div>

@@ -8,22 +8,41 @@ class PostsController < ApplicationController
   end
 
   def create
-
     post = Post.new(post_params)
     if post.save
-      redirect_to posts_path(post)
+      redirect_to post_path(post)
     end
   end
-  #
-  # def destroy
-  #
-  # end
-  #
 
-private
+  def show
+    post_id = params[:id]
+    @post = Post.find_by_id(post_id)
+  end
 
-def post_params
-  params.require(:post).permit(:name,:description,:url)
-end
+  def edit
+    post_id = params[:id]
+    @post = Post.find_by_id(post_id)
+  end
+
+
+  def update
+    post_id = params[:id]
+    post = Post.find_by_id(post_id)
+    post.update_attributes(post_params)
+    redirect_to post_path(post)
+  end
+
+  def destroy
+    post_id = params[:id]
+    post = Post.find_by_id(post_id)
+    post.destroy
+    redirect_to posts_path
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:name,:description,:url)
+  end
 
 end

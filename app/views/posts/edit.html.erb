@@ -1,0 +1,20 @@
+<div class="grey lighten-4 z-depth-3">
+  <div class="container">
+    <h3 class="center-align">Edit Post</h3>
+    <div>
+    <%= form_for @post do |f| %>
+      <h5>Name:</h5>
+      <%= f.text_field :name %>
+      <h5>Link:</h5>
+      <%= f.text_field :url %>
+      <h5>Description:</h5>
+      <%= f.text_area :description, class:"materialize-textarea"%>
+    </div>
+    <div class="center-align">
+      <%= f.submit "Update Post", class:"btn-flat"%>
+      <%= link_to "Back", posts_path, class:"btn-flat"%>
+      <br />
+    </div>
+  </div>
+</div>
+<% end %>
