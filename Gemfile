@@ -5,6 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# markdown support
+gem 'redcarpet', '~> 2.1.1'
+# code snippet rendering in markdown
+gem 'coderay', '~> 1.0.7'
+
 # add jquery
 gem 'jquery-rails', '~> 4.3.1'
 # add materialize gem
