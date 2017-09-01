@@ -1,0 +1,55 @@
+<nav>
+  <div class="nav-wrapper" style="background-color:lightblue">
+    <a href="#" class="brand-logo">KUMU</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+        <a href="sass.html">Sass</a>
+      </li>
+      <li>
+        <a href="badges.html">Components</a>
+      </li>
+      <li>
+        <a href="collapsible.html">JavaScript</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+</br>
+
+<div class="container">
+<div class="row">
+  <div class="col m6 offset-m3">
+
+    <h4>thanks for choosing</h4>
+    <h1>
+      <strong>KUMU</strong>
+    </h1>
+  </br>
+  <hr>
+  Sign Up
+  <hr>
+</br>
+
+<%= form_for @user do |f| %>
+<div>
+  <%= f.text_field :first_name, placeholder: "First Name" %>
+</div>
+<div>
+  <%= f.text_field :last_name, placeholder: "Last Name" %>
+</div>
+<div>
+  <%= f.text_field :username, placeholder: "Email" %>
+</div>
+<div>
+  <%= f.password_field :password, placeholder: "Password" %>
+</div>
+<div>
+  <%= f.text_field :bio, placeholder: "Bio" %>
+</div>
+<%= f.submit "Kumu Up" %>
+<% end %>
+
+</div>
+</div>
+</div>

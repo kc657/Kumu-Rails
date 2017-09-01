@@ -5,7 +5,15 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# markdown support
+gem 'redcarpet', '~> 2.1.1'
+# code snippet rendering in markdown
+gem 'coderay', '~> 1.0.7'
 
+# add jquery
+gem 'jquery-rails', '~> 4.3.1'
+# add materialize gem
+gem 'materialize-sass', '~> 0.100.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
 # Use postgresql as the database for Active Record
@@ -28,7 +36,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+#hirb
+gem 'hirb'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
