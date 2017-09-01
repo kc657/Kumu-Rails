@@ -1,8 +1,9 @@
 <div class="container center-align">
-
+<div class="container">
+  <br />
+  <a class='dropdown-button btn-flat white grey-text text-darken-2' href='#' data-activates='dropdown1'>Filter By</a>
+</div>
   <!-- Dropdown Trigger -->
- <a class='dropdown-button btn-flat white grey-text text-darken-2' href='#' data-activates='dropdown1'>Filter By</a>
-
  <!-- Dropdown Structure -->
  <ul id='dropdown1' class='dropdown-content'>
    <li><a class="grey-text text-darken-2" href="#!"><i class="material-icons ">thumb_up</i>Votes</a></li>
@@ -19,7 +20,7 @@
   </div>
     <div class="col m11 card-content black-text">
       <h5 class="title">
-      <a href="http://<%= post.url %>"> <%= post.name %></a><br>
+      <a href="http://<%= post.url %>" target="_blank"> <%= post.name %></a><br>
     </h5>
       <p class="grey-text text-darken-3">
         <%= post.description %>
