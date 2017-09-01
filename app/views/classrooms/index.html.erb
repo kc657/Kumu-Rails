@@ -8,23 +8,25 @@
           <ul class='right hide-on-med-and-down'>
             <li><a href='#' target='_blank'>About</a></li>
             <% if current_user %>
-              <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
-              <li><%= link_to "Log Out", logout_path %></li>
-            <% else %>
-              <li><%= link_to "Create Account", new_user_path %></li>
-              <li><%= link_to "Log In", login_path %></li>
+            <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
+            <li><%= link_to "Log Out", logout_path %></li>
+          <% else %>
+            <li><%= link_to "Create Account", new_user_path %></li>
+            <li><%= link_to "Log In", login_path %></li>
             <% end %>
           </ul>
         </div>
       </div>
       <ul class='side-nav' id='mobile-demo'>
-        <li><a href='#' target='_blank'>About</a></li>
+        <li>
+          <a href='#' target='_blank'>About Us</a>
+        </li>
         <% if current_user %>
-          <li><%= link_to "Profile", users_path(current_user) %></li>
-          <li><%= link_to "Log Out", logout_path %></li>
-        <% else %>
-          <li><%= link_to "Create Account", new_user_path %></li>
-          <li><%= link_to "Log In", login_path %></li>
+        <li><%= link_to "Profile", users_path(current_user) %></li>
+        <li><%= link_to "Log Out", logout_path %></li>
+      <% else %>
+        <li><%= link_to "Create Account", new_user_path %></li>
+        <li><%= link_to "Log In", login_path %></li>
         <% end %>
       </ul>
     </div>
