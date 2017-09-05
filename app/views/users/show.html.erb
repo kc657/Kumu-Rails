@@ -1,5 +1,4 @@
-<head></head>
-<body class="user-html">
+<div class="user-html">
   <h2 class="center-align">
     Welcome,
     <%= @user.first_name.capitalize %>!
@@ -49,4 +48,4 @@
   <div class="edit-profile">
     <%= link_to "Edit Profile", "#{current_user[:id]}/edit" %>
   </div>
-</body>
+</div>

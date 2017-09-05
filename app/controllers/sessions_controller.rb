@@ -22,6 +22,5 @@ class SessionsController < ApplicationController
     flash[:notice] = "Successfully logged out."        # <--- Add this flash notice
     redirect_to root_path
   end
-
-
+  
 end

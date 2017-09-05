@@ -1,12 +1,8 @@
 class PostsController < ApplicationController
   # has_many :users
-
-
-
   # :current_user
   # user = User.find_by_username(params[:username])
   # if user && user.authenticate(params[:password])
-
   def index
     @posts = Post.all
   end
@@ -66,7 +62,6 @@ class PostsController < ApplicationController
     @post.downvote_by current_user
     redirect_to posts_path
   end
-
 
   private
 
