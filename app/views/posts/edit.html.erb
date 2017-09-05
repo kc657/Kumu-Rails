@@ -1,3 +1,6 @@
+<% flash.each do |name, msg| %>
+<div class="red-text"><%= msg %></div>
+<% end %>
 <%= form_for @post do |f| %>
 <div class="grey lighten-4 z-depth-3">
   <div class="container">
@@ -5,17 +8,16 @@
     <div>
       <h5>Name:</h5>
       <%= f.text_field :name %>
-      <h5>Link:</h5>
-      <%= f.text_field :url %>
       <h5>Description:</h5>
       <%= f.text_field :description %>
-
+      <h5>Link:</h5>
+      <%= f.text_field :url %>
       <h5>Content:</h5>
       <%= f.text_area :content, class:"materialize-textarea"%>
     </div>
     <div class="center-align">
-      <%= f.submit "Update Post", class:"btn-flat"%>
-      <%= link_to "Back", posts_path, class:"btn-flat"%>
+      <%= f.submit "Save Post", class:"btn-flat"%>
+      <%= link_to "Cancel", post_path(@post.id), class:"btn-flat"%>
       <br />
     </div>
   </div>

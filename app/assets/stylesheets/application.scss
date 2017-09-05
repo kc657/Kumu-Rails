@@ -40,6 +40,7 @@
   text-align: center;
   position: relative;
   bottom: 195px;
+  border-radius: 50%;
 }
 .user-hr {
   width: 120%;
@@ -87,4 +88,16 @@
 .user-html {
   font-size: 100%;
   overflow-x: hidden;
+  // background-image: url(chalkboard-green.jpg);
+  // color: white;
+}
+
+// <-- edit user -->
+
+.upload {
+  text-align: center;
+  margin-top: 100px;
+}
+.actions {
+  margin-top: 30px;
 }
