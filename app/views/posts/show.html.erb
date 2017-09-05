@@ -1,14 +1,17 @@
 
 <div class="row grey lighten-4 z-depth-3">
-  <h3 class="left-align container"><%= @post.name %></h3>
+  <div class="container center-align">
+    <%= link_to "Back", posts_path, class:"btn-flat"%>
+    <%= link_to "Edit Post", edit_post_path(@post.id), class:"btn-flat"%>
+  </div>
+  <h3 class="left-align container"><%= @post.id %>. <%= @post.name %></h3>
   <div class="container">
       <h5><%= @post.description %></h5>
       <h5><a href="http://<%= @post.url %>"><%= @post.url%></a></h5>
-    <div class="top class white"
+    <div class="white">
       <p><%= markdown(@post.content) %></p>
     </div>
 </div>
 <div class="center-align">
-<%= link_to "View All Posts", posts_path, class:"btn-flat"%>
 <%= button_to "Delete", @post, method: :delete %>
 </div>
