@@ -18,3 +18,14 @@
   </div>
 </div>
 <% end %>
+
+<div class="upload">
+  <h2>Upload User Image</h2>
+  <%= form_for @user, html:{ multipart: true } do |f| %>
+  <span>Image</span>
+  <%= f.file_field :image %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>
+</div>

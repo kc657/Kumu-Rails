@@ -23,7 +23,7 @@
   <div style="class = row main-content">
     <div class="col s4 user-img">
       <div>
-        <img class="user-img" src="https://trello-attachments.s3.amazonaws.com/59a7049acf66117e61490fb5/59a73250b78f21ff5fefa5b5/3eab3a4ab28a9ceae34644a830825b2a/Screen_Shot_2017-08-30_at_4.03.55_PM.jpg">
+        <%= image_tag @user.image.url('medium'), :class => "user-img", :alt => image_alt("user picture here") %>
       </div>
     </div>
     <div class="col s6 info-center">
