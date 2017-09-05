@@ -1,5 +1,5 @@
-<div class="container center-align">
-<div class="container">
+<div class="center-align grey lighten-4">
+<div class="container grey lighten-4">
   <br />
   <a class='dropdown-button btn-flat white grey-text text-darken-2' href='#' data-activates='dropdown1'>Filter By</a>
 </div>
@@ -19,9 +19,8 @@
     </button>
   </div>
     <div class="col m11 card-content black-text">
-      <h5 class="title">
-      <a href="http://<%= post.url %>" target="_blank"> <%= post.name %></a><br>
-      <%= link_to "Show This Post", post_path(post.id), class:"btn-flat"%>
+      <h5 class="title" href="http://<%= post.url %>" target="_blank"><br>
+      <%= link_to post.name, post_path(post.id)%>
     </h5>
       <p class="grey-text text-darken-3">
         <%= post.description %>
@@ -34,3 +33,6 @@
     </div>
 </div>
 <% end %>
+<div class="center-align grey lighten-4">
+<%= link_to "Home", home_path, class:"btn-flat grey-text text-darken-2"%>
+</div>
