@@ -38,6 +38,7 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts_as_votable (0.10.0)
     arel (8.0.0)
     bcrypt (3.1.11)
     bindex (0.5.0)
@@ -166,7 +167,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt (~> 3.1.7)
+  acts_as_votable (~> 0.10.0)
+  bcrypt (~> 3.1.11)
   byebug
   coderay (~> 1.0.7)
   coffee-rails (~> 4.2)

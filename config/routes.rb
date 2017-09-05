@@ -25,8 +25,17 @@ Rails.application.routes.draw do
   get '/posts/:id', to: 'posts#show', as: 'post'
   get '/posts/:id/edit', to: 'posts#edit', as: 'edit_post'
   get '/post/new', to: 'posts#new', as: 'new_post'
-  post '/posts', to: 'posts#create'
+  post '/posts', to: 'posts#create', as: 'create_post'
   patch '/posts/:id', to: 'posts#update'
   delete '/posts/:id', to: 'posts#destroy'
+
+  # Voting routes
+  resources :posts, only: [] do
+  member do
+    put "like", to: "posts#upvote"
+    put "dislike", to: "posts#downvote"
+  end
+  end
+
 
 end

@@ -1,5 +1,6 @@
 <div class="center-align grey lighten-4">
 <div class="container grey lighten-4">
+
   <br />
   <a class='dropdown-button btn-flat white grey-text text-darken-2' href='#' data-activates='dropdown1'>Filter By</a>
 </div>
@@ -11,6 +12,8 @@
    <li><a class="grey-text text-darken-2" href="#!"><i class="material-icons ">person</i>Yours</a></li>
  </ul>
 </div>
+<br />
+
 <% @posts.each do |post| %>
 <div class="row card #fafafa hoverable">
   <div class="col m12 center-align">
@@ -34,6 +37,14 @@
           <i class= "material-icons clear">arrow_downward</i>
       </button>
     </div>
+  <%= link_to like_post_path(post), method: :put do %>
+      Upvote
+    <%= post.get_upvotes.size %>
+  <% end %>
+  <%= link_to dislike_post_path(post), method: :put do %>
+      Downvote
+    <%= post.get_downvotes.size %>
+  <% end %>
 </div>
 <% end %>
 <div class="center-align grey lighten-4">
