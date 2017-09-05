@@ -1,16 +1,36 @@
-<nav>
-  <div class="nav-wrapper" style="background-color:lightblue">
-    <a href="#" class="brand-logo">KUMU</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
+<nav class='teal z-depth-0'>
+  <div class='nav-wrapper'>
+    <div class='row'>
+      <div class='col s12'>
+        <a href='#' data-activates='mobile-demo' class='button-collapse show-on-large'>
+          <i class='material-icons'>menu</i>
+        </a>
+        <a href='#' class='brand-logo' target='_blank'>Kumu</a>
+        <ul class='right hide-on-med-and-down'>
+          <li>
+            <a href='#' target='_blank'>About Us</a>
+          </li>
+          <% if current_user %>
+          <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
+          <li><%= link_to "Log Out", logout_path %></li>
+        <% else %>
+          <li><%= link_to "Create Account", new_user_path %></li>
+          <li><%= link_to "Log In", login_path %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <ul class='side-nav' id='mobile-demo'>
       <li>
-        <a href="sass.html">Sass</a>
+        <a href='#' target='_blank'>About Us</a>
       </li>
-      <li>
-        <a href="badges.html">Components</a>
-      </li>
-      <li>
-        <a href="collapsible.html">JavaScript</a>
-      </li>
+      <% if current_user %>
+      <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
+      <li><%= link_to "Log Out", logout_path %></li>
+    <% else %>
+      <li><%= link_to "Create Account", new_user_path %></li>
+      <li><%= link_to "Log In", login_path %></li>
+      <% end %>
     </ul>
   </div>
 </nav>
