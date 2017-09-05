@@ -29,12 +29,19 @@ Rails.application.routes.draw do
   patch '/posts/:id', to: 'posts#update'
   delete '/posts/:id', to: 'posts#destroy'
 
+  #Topics routes
+  get '/topics', to: 'topics#index', as: 'topics'
+  get '/topics/:id', to: 'topics#index', as: 'topic'
+  post '/topics', to: 'topics#create', as: 'create_topic'
+  patch 'topics/:id', to: 'posts#update'
+  delete '/topics/:id', to: 'topics#destroy'
+
   # Voting routes
   resources :posts, only: [] do
-  member do
-    put "like", to: "posts#upvote"
-    put "dislike", to: "posts#downvote"
-  end
+    member do
+      put "like", to: "posts#upvote"
+      put "dislike", to: "posts#downvote"
+    end
   end
 
 
