@@ -10,6 +10,8 @@ gem 'redcarpet', '~> 2.1.1'
 # code snippet rendering in markdown
 gem 'coderay', '~> 1.0.7'
 
+gem 'acts_as_votable', '~> 0.10.0'
+
 # add jquery
 gem 'jquery-rails', '~> 4.3.1'
 # add materialize gem
@@ -36,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.11'
 #hirb
 gem 'hirb'
 

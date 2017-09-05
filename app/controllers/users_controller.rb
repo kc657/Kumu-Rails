@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
+  # has_many :posts
 
+  # before_action :require_login, only: [:show]
 
   def index
     @users = User.all
@@ -12,7 +14,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     login(@user)
-    redirect_to root_path
+    redirect_to @user
   end
 
   def show

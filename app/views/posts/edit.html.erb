@@ -13,9 +13,9 @@
       <%= f.text_area :content, class:"materialize-textarea"%>
     </div>
     <div class="center-align">
-      <%= f.submit "Update Post", class:"btn-flat"%>
-      <%= link_to "Back", posts_path, class:"btn-flat"%>
-      <br/>
+      <%= f.submit "Save Post", class:"btn-flat"%>
+      <%= link_to "Cancel", post_path(@post.id), class:"btn-flat"%>
+      <br />
     </div>
   </div>
 </div>
