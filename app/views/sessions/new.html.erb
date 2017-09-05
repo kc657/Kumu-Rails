@@ -1,35 +1,26 @@
-<nav>
-  <div class="nav-wrapper" style="background-color:lightblue">
-    <a href="#" class="brand-logo">KUMU</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">JavaScript</a></li>
-    </ul>
-  </div>
-</nav>
-
-</br>
-
-
 <div class="container">
   <div class="row">
     <div class="col m6 offset-m3">
-
-<h4>welcome back to</h4>
-<h1><strong>KUMU</strong></h1>
-</br>
-<hr>
-Log In
-<hr>
-</br>
-
-<%= form_for @user, url: "/sessions", method: "post" do |f| %>
-  <div>
-    <%= f.text_field :username, placeholder: "Email" %>
+      <h4>welcome back to</h4>
+      <h1>
+        <strong>KUMU</strong>
+      </h1>
+      <br>
+      <hr>
+      Log In
+      <hr>
+      <br>
+    </div>
+    <div class="col m6 offset-m3">
+      <%= form_for @user, url: "/sessions", method: "post" do |f| %>
+      <div>
+        <%= f.text_field :username, placeholder: "Email" %>
+      </div>
+      <div>
+        <%= f.password_field :password, placeholder: "Password" %>
+      </div>
+      <%= f.submit "Kumu In" %>
+      <% end %>
+    </div>
   </div>
-  <div>
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div>
-  <%= f.submit "Kumu In" %>
-<% end %>
+</div>

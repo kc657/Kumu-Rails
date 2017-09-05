@@ -1,32 +1,15 @@
-<head></head>
-<body class="user-html">
-  <nav>
-    <div class="nav-wrapper" style="background-color:lightblue">
-      <a href="#" class="brand-logo">KUMU</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/">About Us</a>
-        </li>
-        <li>
-          <a href="/logout">Logout</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<div class="user-html">
   <h2 class="center-align">
     Welcome,
     <%= @user.first_name.capitalize %>!
   </h2>
   <div class="classrooms">
-    <h3>Classrooms:</h3><br/>
+    <h3>Classrooms:</h3><br>
     <button class="btn btn-large blue">class1</button>
-    <br/><br/>
+    <br><br>
     <button class="btn btn-large blue">class2</button>
     <br></br>
-    <button class="btn btn-large blue">class3</button><br/><br/>
+    <button class="btn btn-large blue">class3</button><br><br>
 
     <form class="input-field find">
       <div>
@@ -35,12 +18,12 @@
       </div>
     </form>
   </div>
-  <br/>
-  <br/>
+  <br>
+  <br>
   <div style="class = row main-content">
     <div class="col s4 user-img">
       <div>
-        <img class="user-img" src="https://trello-attachments.s3.amazonaws.com/59a7049acf66117e61490fb5/59a73250b78f21ff5fefa5b5/3eab3a4ab28a9ceae34644a830825b2a/Screen_Shot_2017-08-30_at_4.03.55_PM.jpg">
+        <%= image_tag @user.image.url('medium'), :class => "user-img", :alt => image_alt("user picture here") %>
       </div>
     </div>
     <div class="col s6 info-center">
@@ -53,7 +36,7 @@
       </div>
     </div>
   </div>
-  <br/>
+  <br>
   <hr class="user-hr"/>
   <div class="stats">
     <h4>Achievements / stats:</h4>
@@ -65,4 +48,4 @@
   <div class="edit-profile">
     <%= link_to "Edit Profile", "#{current_user[:id]}/edit" %>
   </div>
-</body>
+</div>

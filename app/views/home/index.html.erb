@@ -1,196 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Chalkchain</title>
-  </head>
-  <body>
-    <nav class='teal z-depth-0'>
-      <div class='nav-wrapper'>
-        <div class='row'>
-          <div class='col s12'>
-            <a href='#' data-activates='mobile-demo' class='button-collapse show-on-large'>
-              <i class='material-icons'>menu</i>
-            </a>
-            <a href='#' class='brand-logo' target='_blank'>Chalkchain</a>
-            <ul class='right hide-on-med-and-down'>
-              <li>
-                <a href='#' target='_blank'>About Us</a>
-              </li>
-              <% if current_user %>
-              <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
-              <li><%= link_to "Log Out", logout_path %></li>
-            <% else %>
-              <li><%= link_to "Create Account", new_user_path %></li>
-              <li><%= link_to "Log In", login_path %></li>
-              <% end %>
-            </ul>
-          </div>
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h1 class="header center teal-text text-lighten-2">Kumu</h1>
+      <div class="row center">
+        <h5 class="header col s12 light white-text">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
+        </h5>
+      </div>
+      <div class="row center">
+        <a href="/login" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+  <div class="parallax"><img src="assets/blackboard.jpg" alt="Unsplashed background img 1"></div>
+</div>
+<div class="container">
+  <div class="section">
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center brown-text">
+            <i class="material-icons">flash_on</i>
+          </h2>
+          <h5 class="center">Random title goes here</h5>
+          <p class="light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
+          </p>
         </div>
-        <ul class='side-nav' id='mobile-demo'>
+      </div>
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center brown-text">
+            <i class="material-icons">group</i>
+          </h2>
+          <h5 class="center">Random title goes here</h5>
+          <p class="light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
+          </p>
+        </div>
+      </div>
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center brown-text">
+            <i class="material-icons">settings</i>
+          </h2>
+          <h5 class="center">Random title goes here</h5>
+          <p class="light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <h5 class="header col s12 light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
+        </h5>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="assets/parallax2.jpg" alt="Unsplashed background img 2"></div>
+</div>
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <div class="col s12 center">
+        <h3>
+          <i class="mdi-content-send brown-text"></i>
+        </h3>
+        <h4>Contact Us</h4>
+        <p class="left-align light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text
+          goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.Random
+          text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
+          Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.Random text goes here. Random text goes
+          here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text
+          goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.Random text goes here. Random text goes here. Random text goes here. Random
+          text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
+          Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes
+          here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text
+          goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <h5 class="header col s12 light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
+        </h5>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="assets/parallax1.jpg" alt="Unsplashed background img 3"></div>
+</div>
+<footer class="page-footer teal">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Company Bio</h5>
+        <p class="grey-text text-lighten-4">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
+        </p>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Settings</h5>
+        <ul>
           <li>
-            <a href='#' target='_blank'>About Us</a>
+            <a class="white-text" href="#!">Link 1</a>
           </li>
-          <% if current_user %>
-          <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
-          <li><%= link_to "Log Out", logout_path %></li>
-        <% else %>
-          <li><%= link_to "Create Account", new_user_path %></li>
-          <li><%= link_to "Log In", login_path %></li>
-          <% end %>
+          <li>
+            <a class="white-text" href="#!">Link 2</a>
+          </li>
+          <li>
+            <a class="white-text" href="#!">Link 3</a>
+          </li>
+          <li>
+            <a class="white-text" href="#!">Link 4</a>
+          </li>
         </ul>
       </div>
-    </nav>
-    <div id="index-banner" class="parallax-container">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <br><br>
-          <h1 class="header center teal-text text-lighten-2">Chalkchain</h1>
-          <div class="row center">
-            <h5 class="header col s12 light white-text">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
-            </h5>
-          </div>
-          <div class="row center">
-            <a href="/login" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-          </div>
-          <br><br>
-
-        </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Connect</h5>
+        <ul>
+          <li>
+            <a class="white-text" href="#!">Link 1</a>
+          </li>
+          <li>
+            <a class="white-text" href="#!">Link 2</a>
+          </li>
+          <li>
+            <a class="white-text" href="#!">Link 3</a>
+          </li>
+          <li>
+            <a class="white-text" href="#!">Link 4</a>
+          </li>
+        </ul>
       </div>
-      <div class="parallax"><img src="assets/blackboard.jpg" alt="Unsplashed background img 1"></div>
     </div>
+  </div>
+  <div class="footer-copyright">
     <div class="container">
-      <div class="section">
-        <!--   Icon Section   -->
-        <div class="row">
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center brown-text">
-                <i class="material-icons">flash_on</i>
-              </h2>
-              <h5 class="center">Random title goes here</h5>
-              <p class="light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
-              </p>
-            </div>
-          </div>
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center brown-text">
-                <i class="material-icons">group</i>
-              </h2>
-              <h5 class="center">Random title goes here</h5>
-              <p class="light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
-              </p>
-            </div>
-          </div>
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center brown-text">
-                <i class="material-icons">settings</i>
-              </h2>
-              <h5 class="center">Random title goes here</h5>
-              <p class="light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      Made by Kevin alone
     </div>
-    <div class="parallax-container valign-wrapper">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <div class="row center">
-            <h5 class="header col s12 light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
-            </h5>
-          </div>
-        </div>
-      </div>
-      <div class="parallax"><img src="assets/parallax2.jpg" alt="Unsplashed background img 2"></div>
-    </div>
-    <div class="container">
-      <div class="section">
-        <div class="row">
-          <div class="col s12 center">
-            <h3>
-              <i class="mdi-content-send brown-text"></i>
-            </h3>
-            <h4>Contact Us</h4>
-            <p class="left-align light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text
-              goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.Random
-              text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
-              Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.Random text goes here. Random text goes
-              here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text
-              goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.Random text goes here. Random text goes here. Random text goes here. Random
-              text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
-              Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes
-              here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text
-              goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="parallax-container valign-wrapper">
-      <div class="section no-pad-bot">
-        <div class="container">
-          <div class="row center">
-            <h5 class="header col s12 light">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
-            </h5>
-          </div>
-        </div>
-      </div>
-      <div class="parallax"><img src="assets/parallax1.jpg" alt="Unsplashed background img 3"></div>
-    </div>
-    <footer class="page-footer teal">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Company Bio</h5>
-            <p class="grey-text text-lighten-4">Random text goes here. Random text goes here. Random text goes here. Random text goes here. Random text goes here.
-            </p>
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text">Settings</h5>
-            <ul>
-              <li>
-                <a class="white-text" href="#!">Link 1</a>
-              </li>
-              <li>
-                <a class="white-text" href="#!">Link 2</a>
-              </li>
-              <li>
-                <a class="white-text" href="#!">Link 3</a>
-              </li>
-              <li>
-                <a class="white-text" href="#!">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text">Connect</h5>
-            <ul>
-              <li>
-                <a class="white-text" href="#!">Link 1</a>
-              </li>
-              <li>
-                <a class="white-text" href="#!">Link 2</a>
-              </li>
-              <li>
-                <a class="white-text" href="#!">Link 3</a>
-              </li>
-              <li>
-                <a class="white-text" href="#!">Link 4</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-          Made by Kevin alone
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+  </div>
+</footer>
