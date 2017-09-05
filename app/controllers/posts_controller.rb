@@ -45,7 +45,7 @@ class PostsController < ApplicationController
     post_id = params[:id]
     post = Post.find_by_id(post_id)
     post.update_attributes(post_params)
-    redirect_to posts_path
+    redirect_to post_path(post_id)
   end
 
   def destroy

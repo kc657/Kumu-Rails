@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   #Home route
-  get 'home/index'
+  get 'home/index', as: 'home'
 
   #Classrooms routes
   get '/classrooms', to:'classrooms#index', as: 'classrooms'

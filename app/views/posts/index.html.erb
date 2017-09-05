@@ -1,43 +1,6 @@
-<nav class='teal z-depth-0'>
-  <div class='nav-wrapper'>
-    <div class='row'>
-      <div class='col s12'>
-        <a href='#' data-activates='mobile-demo' class='button-collapse show-on-large'>
-          <i class='material-icons'>menu</i>
-        </a>
-        <a href='#' class='brand-logo' target='_blank'>Chalkchain</a>
-        <ul class='right hide-on-med-and-down'>
-          <li>
-            <a href='#' target='_blank'>About Us</a>
-          </li>
-        <% if current_user %>
-          <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
-          <li><%= link_to "Log Out", logout_path %></li>
-        <% else %>
-          <li><%= link_to "Create Account", new_user_path %></li>
-          <li><%= link_to "Log In", login_path %></li>
-        <% end %>
-        </ul>
-      </div>
-    </div>
-    <ul class='side-nav' id='mobile-demo'>
-      <li>
-        <a href='#' target='_blank'>About Us</a>
-      </li>
-      <% if current_user %>
-        <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
-        <li><%= link_to "Log Out", logout_path %></li>
-      <% else %>
-        <li><%= link_to "Create Account", new_user_path %></li>
-        <li><%= link_to "Log In", login_path %></li>
-      <% end %>
-    </ul>
-  </div>
-</nav>
+<div class="center-align grey lighten-4">
+<div class="container grey lighten-4">
 
-
-<div class="container center-align">
-<div class="container">
   <br />
   <a class='dropdown-button btn-flat white grey-text text-darken-2' href='#' data-activates='dropdown1'>Filter By</a>
 </div>
@@ -52,42 +15,38 @@
 <br />
 
 <% @posts.each do |post| %>
-    <div class="row card #fafafa hoverable">
-      <div class="col m1 center-align">
-        <button class= "waves-effect waves-green btn-flat">
-            <i class= "material-icons clear">arrow_upward</i>
-        </button>
-      </div>
-        <div class="col m11 card-content black-text">
-          <h5 class="title">
-          <a href="http://<%= post.url %>" target="_blank"> <%= post.name %></a><br>
-        </h5>
-          <p class="grey-text text-darken-3">
-            <%= post.description %>
-          </p>
-        </div>
-        <div class="col m1 center-align">
-          <button class= "waves-effect waves-red btn-flat">
-              <i class= "material-icons clear">arrow_downward</i>
-          </button>
-        </div>
+<div class="row card #fafafa hoverable">
+  <div class="col m12 center-align">
+    <button class= "waves-effect waves-green btn-flat left">
+        <i class= "material-icons clear">arrow_upward</i>
+    </button>
+  </div>
+    <div class="col s1 card-content black-text center-align">
+      <h1>7</h1>
     </div>
-
-
-
-    <% @posts.each do |post| %>
-        <h4><%= link_to post.name, post %><br>
-          Submitted <%= time_ago_in_words(post.created_at) %>
-
-        </h4>
-        <%= link_to like_post_path(post), method: :put do %>
+    <div class="col s11 card-content black-text">
+      <h1 class="title" href="http://<%= post.url %>" target="_blank">
+      <%= link_to post.name, post_path(post.id)%>
+    </h1>
+      <h6 class="grey-text text-darken-3">
+        <%= post.description %>
+      </h6>
+    </div>
+    <div class="col m12 center-align">
+      <button class= "waves-effect waves-red btn-flat left">
+          <i class= "material-icons clear">arrow_downward</i>
+      </button>
+    </div>
+  <%= link_to like_post_path(post), method: :put do %>
       Upvote
-      <%= post.get_upvotes.size %>
-    <% end %>
-
-    <%= link_to dislike_post_path(post), method: :put do %>
+    <%= post.get_upvotes.size %>
+  <% end %>
+  <%= link_to dislike_post_path(post), method: :put do %>
       Downvote
-      <%= post.get_downvotes.size %>
-    <% end %>
-
+    <%= post.get_downvotes.size %>
+  <% end %>
+</div>
 <% end %>
+<div class="center-align grey lighten-4">
+<%= link_to "Home", home_path, class:"btn-flat grey-text text-darken-2"%>
+</div>
