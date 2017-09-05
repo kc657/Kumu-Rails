@@ -1,71 +1,45 @@
-<nav class='teal z-depth-0'>
-  <div class='nav-wrapper'>
-    <div class='row'>
-      <div class='col s12'>
-        <a href='#' data-activates='mobile-demo' class='button-collapse show-on-large'>
-          <i class='material-icons'>menu</i>
-        </a>
-        <a href='#' class='brand-logo' target='_blank'>Kumu</a>
-        <ul class='right hide-on-med-and-down'>
-          <li>
-            <a href='#' target='_blank'>About Us</a>
-          </li>
-          <% if current_user %>
-          <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
-          <li><%= link_to "Log Out", logout_path %></li>
-        <% else %>
-          <li><%= link_to "Create Account", new_user_path %></li>
-          <li><%= link_to "Log In", login_path %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-    <ul class='side-nav' id='mobile-demo'>
-      <li>
-        <a href='#' target='_blank'>About Us</a>
-      </li>
-      <% if current_user %>
-      <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
-      <li><%= link_to "Log Out", logout_path %></li>
-    <% else %>
-      <li><%= link_to "Create Account", new_user_path %></li>
-      <li><%= link_to "Log In", login_path %></li>
-      <% end %>
-    </ul>
-  </div>
-</nav>
 <div class="container center-align">
-<div class="container">
-  <br />
-  <a class='dropdown-button btn-flat white grey-text text-darken-2' href='#' data-activates='dropdown1'>Filter By</a>
-</div>
+  <div class="container">
+    <br/>
+    <a class='dropdown-button btn-flat white grey-text text-darken-2' href='#' data-activates='dropdown1'>Filter By</a>
+  </div>
   <!-- Dropdown Trigger -->
- <!-- Dropdown Structure -->
- <ul id='dropdown1' class='dropdown-content'>
-   <li><a class="grey-text text-darken-2" href="#!"><i class="material-icons ">thumb_up</i>Votes</a></li>
-   <li><a class="grey-text text-darken-2" href="#!"><i class="material-icons ">access_time</i>Time</a></li>
-   <li><a class="grey-text text-darken-2" href="#!"><i class="material-icons ">person</i>Yours</a></li>
- </ul>
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li>
+      <a class="grey-text text-darken-2" href="#!">
+        <i class="material-icons ">thumb_up</i>Votes</a>
+    </li>
+    <li>
+      <a class="grey-text text-darken-2" href="#!">
+        <i class="material-icons ">access_time</i>Time</a>
+    </li>
+    <li>
+      <a class="grey-text text-darken-2" href="#!">
+        <i class="material-icons ">person</i>Yours</a>
+    </li>
+  </ul>
 </div>
 <% @posts.each do |post| %>
 <div class="row card #fafafa hoverable">
   <div class="col m1 center-align">
-    <button class= "waves-effect waves-green btn-flat">
-        <i class= "material-icons clear">arrow_upward</i>
+    <button class="waves-effect waves-green btn-flat">
+      <i class="material-icons clear">arrow_upward</i>
     </button>
   </div>
-    <div class="col m11 card-content black-text">
-      <h5 class="title">
-      <a href="http://<%= post.url %>" target="_blank"> <%= post.name %></a><br>
+  <div class="col m11 card-content black-text">
+    <h5 class="title">
+      <a href="http://<%= post.url %>" target="_blank">
+        <%= post.name %></a><br>
     </h5>
-      <p class="grey-text text-darken-3">
-        <%= post.description %>
-      </p>
-    </div>
-    <div class="col m1 center-align">
-      <button class= "waves-effect waves-red btn-flat">
-          <i class= "material-icons clear">arrow_downward</i>
-      </button>
-    </div>
+    <p class="grey-text text-darken-3">
+      <%= post.description %>
+    </p>
+  </div>
+  <div class="col m1 center-align">
+    <button class="waves-effect waves-red btn-flat">
+      <i class="material-icons clear">arrow_downward</i>
+    </button>
+  </div>
 </div>
 <% end %>

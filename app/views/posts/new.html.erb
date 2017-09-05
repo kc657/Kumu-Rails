@@ -1,39 +1,3 @@
-<nav class='teal z-depth-0'>
-  <div class='nav-wrapper'>
-    <div class='row'>
-      <div class='col s12'>
-        <a href='#' data-activates='mobile-demo' class='button-collapse show-on-large'>
-          <i class='material-icons'>menu</i>
-        </a>
-        <a href='#' class='brand-logo' target='_blank'>Kumu</a>
-        <ul class='right hide-on-med-and-down'>
-          <li>
-            <a href='#' target='_blank'>About Us</a>
-          </li>
-          <% if current_user %>
-          <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
-          <li><%= link_to "Log Out", logout_path %></li>
-        <% else %>
-          <li><%= link_to "Create Account", new_user_path %></li>
-          <li><%= link_to "Log In", login_path %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-    <ul class='side-nav' id='mobile-demo'>
-      <li>
-        <a href='#' target='_blank'>About Us</a>
-      </li>
-      <% if current_user %>
-      <li><%= link_to "Profile", "users/#{current_user[:id]}" %></li>
-      <li><%= link_to "Log Out", logout_path %></li>
-    <% else %>
-      <li><%= link_to "Create Account", new_user_path %></li>
-      <li><%= link_to "Log In", login_path %></li>
-      <% end %>
-    </ul>
-  </div>
-</nav>
 <%= form_for :post, url: "/posts", method: "post" do |f| %>
 <div class="grey lighten-4 z-depth-3">
   <div class="container">
@@ -48,7 +12,7 @@
     <%= f.text_area :content, class:"materialize-textarea"%>
     <div class="center-align">
       <%= f.submit "Submit", class:"btn-flat"%>
-      <br />
+      <br>
     </div>
   </div>
 </div>
