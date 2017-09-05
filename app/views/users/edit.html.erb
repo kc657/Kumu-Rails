@@ -1,4 +1,4 @@
-<%= form_for @user do |f| %>
+<%= form_for @user  do |f| %>
 <div class="grey lighten-4 z-depth-3">
   <div class="container">
     <h3 class="center-align">Edit Profile</h3>
@@ -18,3 +18,13 @@
   </div>
 </div>
 <% end %>
+<div class = "upload">
+<h2>Upload User Image</h2>
+<%= form_for @user, html:{ multipart: true } do |f| %>
+<span>Image</span>
+<%= f.file_field :image %>
+<div class = "actions">
+  <%= f.submit %>
+</div>
+<% end %>
+</div>
