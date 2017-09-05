@@ -1,13 +1,17 @@
+<% flash.each do |name, msg| %>
+<div class="red-text"><%= msg %></div>
+<% end %>
+<%= yield %>
 <%= form_for :post, url: "/posts", method: "post" do |f| %>
 <div class="grey lighten-4 z-depth-3">
   <div class="container">
     <h3 class="center-align">Create New Post</h3>
     <h5>Name:</h5>
     <%= f.text_field :name %>
-    <h5>Add Link:</h5>
-    <%= f.text_field :url %>
-    <h5>Add Description:</h5>
+    <h5>Description:</h5>
     <%= f.text_field :description %>
+    <h5>Link:</h5>
+    <%= f.text_field :url %>
     <h5>Content:</h5>
     <%= f.text_area :content, class:"materialize-textarea"%>
     <div class="center-align">

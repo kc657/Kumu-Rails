@@ -25,11 +25,14 @@
 <div class="row card #fafafa hoverable">
   <div class="col m12 center-align">
     <button class="waves-effect waves-green btn-flat left">
+      <%= link_to like_post_path(post), method: :put do %>
       <i class="material-icons clear">arrow_upward</i>
+      <%= post.get_upvotes.size %>
+      <% end %>
     </button>
   </div>
   <div class="col s1 card-content black-text center-align">
-    <h1>7</h1>
+    <h1><%= post.get_upvotes.size - post.get_downvotes.size %></h1>
   </div>
   <div class="col s11 card-content black-text">
     <h1 class="title" href="http://<%= post.url %>" target="_blank">
@@ -41,17 +44,20 @@
   </div>
   <div class="col m12 center-align">
     <button class="waves-effect waves-red btn-flat left">
+      <%= link_to dislike_post_path(post), method: :put do %>
       <i class="material-icons clear">arrow_downward</i>
+      <%= post.get_downvotes.size %>
+      <% end %>
     </button>
   </div>
-  <%= link_to like_post_path(post), method: :put do %>
+  <!-- <%= link_to like_post_path(post), method: :put do %>
   Upvote
   <%= post.get_upvotes.size %>
   <% end %>
   <%= link_to dislike_post_path(post), method: :put do %>
   Downvote
   <%= post.get_downvotes.size %>
-  <% end %>
+  <% end %> -->
 </div>
 <% end %>
 <div class="center-align grey lighten-4">
