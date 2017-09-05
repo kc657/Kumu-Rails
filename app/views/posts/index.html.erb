@@ -13,21 +13,24 @@
 </div>
 <% @posts.each do |post| %>
 <div class="row card #fafafa hoverable">
-  <div class="col m1 center-align">
-    <button class= "waves-effect waves-green btn-flat">
+  <div class="col m12 center-align">
+    <button class= "waves-effect waves-green btn-flat left">
         <i class= "material-icons clear">arrow_upward</i>
     </button>
   </div>
-    <div class="col m11 card-content black-text">
-      <h5 class="title" href="http://<%= post.url %>" target="_blank"><br>
-      <%= link_to post.name, post_path(post.id)%>
-    </h5>
-      <p class="grey-text text-darken-3">
-        <%= post.description %>
-      </p>
+    <div class="col s1 card-content black-text center-align">
+      <h1>7</h1>
     </div>
-    <div class="col m1 center-align">
-      <button class= "waves-effect waves-red btn-flat">
+    <div class="col s11 card-content black-text">
+      <h1 class="title" href="http://<%= post.url %>" target="_blank">
+      <%= link_to post.name, post_path(post.id)%>
+    </h1>
+      <h6 class="grey-text text-darken-3">
+        <%= post.description %>
+      </h6>
+    </div>
+    <div class="col m12 center-align">
+      <button class= "waves-effect waves-red btn-flat left">
           <i class= "material-icons clear">arrow_downward</i>
       </button>
     </div>
