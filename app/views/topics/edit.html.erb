@@ -1,0 +1,18 @@
+<%= form_for @topic do |f| %>
+<div class="grey lighten-4 z-depth-3">
+  <div class="container">
+    <h3 class="center-align">Edit Post</h3>
+    <div>
+      <h5>Name:</h5>
+      <%= f.text_field :name %>
+      <h5>Description:</h5>
+      <%= f.text_field :description %>
+    </div>
+    <div class="center-align">
+      <%= f.submit "Save Post", class:"btn-flat"%>
+      <%= link_to "Cancel", topic_path(@topic.id), class:"btn-flat"%>
+      <br />
+    </div>
+  </div>
+</div>
+<% end %>

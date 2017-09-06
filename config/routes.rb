@@ -31,9 +31,11 @@ Rails.application.routes.draw do
 
   #Topics routes
   get '/topics', to: 'topics#index', as: 'topics'
-  get '/topics/:id', to: 'topics#index', as: 'topic'
+  get '/topics/:id', to: 'topics#show', as: 'topic'
+  get '/topic/new', to: 'topics#new', as: 'new_topic'
+  get '/topics/:id/edit', to: 'topics#edit', as: 'edit_topic'
   post '/topics', to: 'topics#create', as: 'create_topic'
-  patch 'topics/:id', to: 'posts#update'
+  patch '/topics/:id', to: 'topics#update'
   delete '/topics/:id', to: 'topics#destroy'
 
   # Voting routes
