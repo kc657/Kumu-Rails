@@ -1,24 +1,30 @@
-# README
+Visit [Kumu][(http://kumuapp.herokuapp.com/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### TLDR:
+**Kumu** is a peer-reviewed note-sharing platform for students.
+____
+**Wire Frames**
+[Wireframes](http://i.imgur.com/KXPbFG3.jpg)
+___
+**User Stories**
+* The User:
+	* A student who joins a classroom to learn a specific topic. Students will interact with lectures posted by an instructor; posting notes and feedback.
+	* Students interact with each other's notes through comments and up / down voting. Additionally the App will feature the ability to create an account, have custom information on a user profile, and keep track of user stats.
+	* Users can join topics multiple topics.
+___
+#### Database Structure:
+![Kumu ERD](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+___
+#### Core Tech
+Ruby on Rails
+PostgreSQL
+Hosted on Heroku
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**Required Gems:**
+- `acts_as_votable`
+- `paperclip`
+- ` materialize`
+- `redcarpet`
+- `coderay`
+- `bcrypt`
+___
