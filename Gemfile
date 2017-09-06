@@ -50,6 +50,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # rspec-rails
   gem 'rspec-rails', '~> 3.6'
+  #rails controller test
+  gem 'rails-controller-testing'
   # Factories let you build up objects quickly for your specs
   gem 'factory_girl_rails'
 end
