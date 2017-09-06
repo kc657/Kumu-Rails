@@ -3,7 +3,7 @@ Visit live URL at [Kumu][(http://kumuapp.herokuapp.com/)
 **Kumu** is a peer-reviewed note-sharing platform for students.
 ____
 **Wire Frames**
-[http://i.imgur.com/KXPbFG3.jpg](http://i.imgur.com/KXPbFG3.jpg)
+[Wireframes](http://i.imgur.com/KXPbFG3.jpg)
 ___
 **User Stories**
 * The User:
