@@ -24,10 +24,16 @@
 }
 
 // <-- USER PROFILE PAGE -->
+// .class-search {
+//   width: 25%;
+// }
 
 .classrooms {
   position: relative;
   left: 3%;
+}
+.btn-large {
+  width: 15%;
 }
 .find {
   width: 10%;
@@ -39,7 +45,7 @@
 .user-img {
   text-align: center;
   position: relative;
-  bottom: 195px;
+  bottom: 215px;
   border-radius: 50%;
 }
 .user-hr {
@@ -62,15 +68,18 @@
   text-align: center;
   position: relative;
   left: 34.8%;
-  bottom: 350px;
+  bottom: 390px;
 }
-.user-hr {
-  width: 40%;
-  position: relative;
-  text-align: center;
-}
+// .user-hr {
+//   width: 40%;
+//   position: relative;
+//   text-align: center;
+// }
 .stats {
   text-align: center;
+  position: relative;
+  left: 33%;
+  bottom: 1050px;
 }
 .bio {
   float: left;
@@ -78,18 +87,40 @@
 .edit-profile {
   text-align: center;
   position: relative;
-  right: 8%;
+  right: 19%;
+  bottom: 710px;
 }
 .specific-stats {
   position: relative;
-  left: 42%;
-  margin-top: 35px;
+  left: 43.5%;
+  margin-top: 10px;
 }
 .user-html {
   font-size: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
   // background-image: url(chalkboard-green.jpg);
   // color: white;
+}
+/* Media Object */
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+.media-figure {
+  margin-right: 1em;
+}
+.media-body {
+  flex: 1;
+  display: inline-block;
+  overflow: auto;
+  height: 150px;
+}
+/* Author Box Styles */
+.author-box {
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 2px;
 }
 
 // <-- edit user -->

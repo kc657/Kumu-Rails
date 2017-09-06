@@ -1,0 +1,26 @@
+<h1> topics here </h1>
+<div class="center-align grey lighten-4">
+  <div class="container grey lighten-4">
+    <br/>
+    <a class='dropdown-button btn-flat white grey-text text-darken-2' href='#' data-activates='dropdown1'>Filter By</a>
+  </div>
+  <!-- Dropdown Trigger -->
+  <!-- Dropdown Structure -->
+
+</div>
+<br/>
+<% @topics.each do |topic| %>
+<div class="row card #fafafa hoverable">
+  <div class="col s11 card-content black-text">
+    <%= link_to topic.name, topic_path(topic.id)%>
+  </h1>
+  <h6 class="grey-text text-darken-3">
+    <%= topic.description %>
+  </h6>
+</div>
+</div>
+<% end %>
+<div class="center-align grey lighten-4">
+  <%= link_to "Home", home_path, class:"btn-flat grey-text text-darken-2"%>
+</div>
+  

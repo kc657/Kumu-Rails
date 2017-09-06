@@ -1,0 +1,16 @@
+<div class="row grey lighten-4 z-depth-3">
+  <div class="container center-align">
+    <%= link_to "Back", topics_path, class:"btn-flat"%>
+    <%= link_to "Edit Topic", edit_topic_path(@topic.id), class:"btn-flat"%>
+  </div>
+  <h3 class="left-align container">
+    <!-- <%= @topic.id %> -->
+    <%= @topic.name %>
+  </h3>
+  <div class="container">
+    <h5><%= @topic.description %></h5>
+  </div>
+  <div class="center-align">
+    <%= button_to "Delete", @topic, method: :delete %>
+  </div>
+</div>
