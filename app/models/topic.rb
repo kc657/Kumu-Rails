@@ -1,5 +1,5 @@
 class Topic < ApplicationRecord
-
+belongs_to :user
 
 #Post association Foreing keys
 has_many :posts
