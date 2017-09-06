@@ -16,10 +16,4 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
-  describe "Get #create" do
-    it "creates new user" do
-
-    end
-  end
-
 end
