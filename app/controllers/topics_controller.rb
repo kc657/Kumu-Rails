@@ -10,15 +10,14 @@ class TopicsController < ApplicationController
 
   def create
     topic = Topic.new(topic_params)
-    # topic[:user_id] = current_user.id <-- this line causing
-                                              # errors?
+    # topic[:user_id] = current_user.id
     puts topic.inspect
 
     if topic.save
       redirect_to topic_path(topic)
     else
       puts topic.errors.messages
-      flash[:notice]=post.errors.messages
+      flash[:notice]=topic.errors.messages
       render :new
     end
   end
@@ -26,6 +25,7 @@ class TopicsController < ApplicationController
   def show
     topic_id = params[:id]
     @topic = Topic.find_by_id(params[:id])
+    @posts = @topic.posts
     render :show
   end
 
@@ -33,6 +33,7 @@ class TopicsController < ApplicationController
   #   topic_id = params[:id]
   #   @topic = Topic.find_by_id(params[:id]
   # end
+
   def destroy
     topic_id = params[:id]
     topic = Topic.find_by_id(topic_id)

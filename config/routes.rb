@@ -21,11 +21,11 @@ Rails.application.routes.draw do
   post '/sessions', to: 'sessions#create'
 
   #Post routes
-  get '/posts', to: 'posts#index', as: 'posts'
+  get '/posts', to: 'posts#index', as: 'test_posts'
   get '/posts/:id', to: 'posts#show', as: 'post'
   get '/posts/:id/edit', to: 'posts#edit', as: 'edit_post'
-  get '/post/new', to: 'posts#new', as: 'new_post'
-  post '/posts', to: 'posts#create', as: 'create_post'
+  # get '/post/new', to: 'posts#new', as: 'new_post'
+  # post '/posts', to: 'posts#create', as: 'create_post'
   patch '/posts/:id', to: 'posts#update'
   delete '/posts/:id', to: 'posts#destroy'
 
@@ -37,6 +37,11 @@ Rails.application.routes.draw do
   post '/topics', to: 'topics#create', as: 'create_topic'
   patch '/topics/:id', to: 'topics#update'
   delete '/topics/:id', to: 'topics#destroy'
+
+  #topic-post routes
+  get '/topics/:id/post/new', to: 'posts#new', as: 'new_post'
+  get '/topics/:id/posts', to: 'topics#show', as: 'posts'
+  post '/topics/:id/posts', to: 'posts#create', as: 'create_post'
 
   # Voting routes
   resources :posts, only: [] do
