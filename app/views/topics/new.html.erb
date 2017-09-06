@@ -1,0 +1,19 @@
+<p> new here</p>
+
+<%= form_for :topic, url: "/topics", method: "post" do |f| %>
+<div class="grey lighten-4 z-depth-3">
+  <div class="container">
+    <h3 class="center-align">Create New Topic</h3>
+    <h5>Name:</h5>
+    <%= f.text_field :name %>
+    <h5>Add Description:</h5>
+    <%= f.text_field :description %>
+    <div class="center-align">
+      <%= f.submit "Submit", class:"btn-flat"%>
+      <br>
+    </div>
+  </div>
+</div>
+<% end %>
+
+    
