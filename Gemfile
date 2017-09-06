@@ -65,7 +65,7 @@ end
 
 group :test do
   # Dev-friendly methods for model specs
-  gem 'shoulda-matchers', '~> 3.0'
+  gem 'shoulda-matchers', '~> 3.1'
   # Cleans out your database before each test
   gem 'database_cleaner'
 end
