@@ -17,7 +17,7 @@ ___
 * The User:
 	* A student who joins a classroom to learn a specific topic. Students will interact with lectures posted by an instructor; posting notes and feedback.
 	* Students interact with each other's notes through comments and up / down voting. Additionally the App will feature the ability to create an account, have custom information on a user profile, and keep track of user stats.
-	* Users can join topics multiple topics.
+	* Users can join multiple topics/classrooms.
 ___
 #### Database Structure:
 
