@@ -32,3 +32,14 @@ Hosted on Heroku
 - `coderay`
 - `bcrypt`
 ___
+###Challenges
+- Thumbs_up Gem didn't work for voting, had to try another.
+- DB structure, associating posts with topics.
+____
+###Future Development
+
+- Tagging System for Posts
+- Text-based search for post content
+- Show users that upvoted a post
+- Show posts the a user voted on.
+- Integrate Paperclip in posts.
