@@ -6,8 +6,8 @@ Create a way for students to share their class notes with eachother.
 (Obligatory analogy - *Reddit for Evernote*)
 
 ____
-#### TLDR:
-**Kumu** is a peer-reviewed note-sharing platform for students.
+#### Enter KUMU:
+**Kumu** - a peer-reviewed note-sharing platform for students.
 ____
 **Wire Frames**
 
