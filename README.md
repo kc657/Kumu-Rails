@@ -1,5 +1,5 @@
 
-Visit [Kumu][(http://kumuapp.herokuapp.com/)
+Visit [Kumu](http://kumuapp.herokuapp.com/)
 
 #### TLDR:
 **Kumu** is a peer-reviewed note-sharing platform for students.
