@@ -1,9 +1,11 @@
+
 Visit [Kumu][(http://kumuapp.herokuapp.com/)
 
 #### TLDR:
 **Kumu** is a peer-reviewed note-sharing platform for students.
 ____
 **Wire Frames**
+
 ![Wireframes](http://i.imgur.com/KXPbFG3.jpg)
 ___
 **User Stories**
@@ -13,7 +15,9 @@ ___
 	* Users can join topics multiple topics.
 ___
 #### Database Structure:
-![Kumu ERD](http://i.imgur.com/xtV36jX.jpg "Logo Title Text 1")
+
+![Kumu ERD](http://i.imgur.com/xtV36jX.jpg "ERD")
+
 ___
 #### Core Tech
 Ruby on Rails

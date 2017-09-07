@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
   #Post routes
   get '/posts', to: 'posts#index', as: 'posts'
+  get '/posts/newest', to: 'posts#date_sort', as: 'posts_by_date'
   get '/posts/:id', to: 'posts#show', as: 'post'
   get '/posts/:id/edit', to: 'posts#edit', as: 'edit_post'
   get '/post/new', to: 'posts#new', as: 'new_post'
