@@ -2,6 +2,7 @@
 Visit [Kumu](http://kumuapp.herokuapp.com/)
 #### Inspiration:
 Create a way for students to share their class notes with eachother. 
+
 (Obligatory analogy - *Reddit for Evernote*)
 
 ____
