@@ -1,13 +1,13 @@
 
-Visit [Kumu](http://kumuapp.herokuapp.com/)
 #### Inspiration:
-Create a way for students to share their class notes with eachother. 
+Our dear founder demanded a way for students to share their class notes with each other. Then he left to go work on something else.
 
 (Obligatory analogy - *Reddit for Evernote*)
 
 ____
 #### Enter KUMU:
 **Kumu** - a peer-reviewed note-sharing platform for students.
+Visit [Kumu](http://kumuapp.herokuapp.com/)
 ____
 **Wire Frames**
 
