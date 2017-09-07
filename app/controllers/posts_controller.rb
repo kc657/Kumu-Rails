@@ -19,6 +19,7 @@ class PostsController < ApplicationController
   def create
     post = Post.new(post_params)
     post[:user_id] = current_user.id
+    # post[:topic_id] = params[:id].to_i
     puts post.inspect
 
     if post.save
@@ -69,6 +70,9 @@ class PostsController < ApplicationController
     redirect_to session.delete(:return_to)
   end
 
+  def set_topic
+    @topic = Topic.find_by_id[:topic_id]
+  end
 
   private
 
