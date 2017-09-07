@@ -43,15 +43,15 @@
   <br>
   <div class="stats">
     <h4>Achievements:</h4>
-  <div>
-    <hr class="user-hr"/>
-  </div>
+    <div>
+      <hr class="user-hr"/>
+    </div>
     <ul class="specific-stats">
       <li class="bio">User Since:
         <%= @user.created_at.strftime("%B %d, %Y") %></li>
-      </ul>
-    </div>
-    <div class="edit-profile">
-      <%= link_to "Edit Profile", "#{current_user[:id]}/edit" %>
-    </div>
+    </ul>
   </div>
+  <div class="edit-profile">
+    <%= link_to "Edit Profile", "#{current_user[:id]}/edit" %>
+  </div>
+</div>

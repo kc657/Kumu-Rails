@@ -5,9 +5,6 @@ Rails.application.routes.draw do
   #Home route
   get 'home/index', as: 'home'
 
-  #Classrooms routes
-  get '/classrooms', to:'classrooms#index', as: 'classrooms'
-
   #Users routes
   get '/users/new', to: 'users#new', as: 'new_user'
   get '/users/:id', to: 'users#show', as: 'user'
@@ -25,8 +22,6 @@ Rails.application.routes.draw do
   get '/posts/newest', to: 'posts#date_sort', as: 'posts_by_date'
   get '/posts/:id', to: 'posts#show', as: 'post'
   get '/posts/:id/edit', to: 'posts#edit', as: 'edit_post'
-  # get '/post/new', to: 'posts#new', as: 'new_post'
-  # post '/posts', to: 'posts#create', as: 'create_post'
   patch '/posts/:id', to: 'posts#update'
   delete '/posts/:id', to: 'posts#destroy'
 
@@ -41,7 +36,7 @@ Rails.application.routes.draw do
 
   #topic-post routes
   get '/topics/:id/post/new', to: 'posts#new', as: 'new_post'
-  get '/topics/:id/posts', to: 'topics#show', as: 'posts'
+  get '/topics/:id/posts', to: 'topics#show'
   post '/topics/:id/posts', to: 'posts#create', as: 'create_post'
 
   # Voting routes
