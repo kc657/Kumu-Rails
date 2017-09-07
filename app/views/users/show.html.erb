@@ -14,7 +14,7 @@
     <form class="input-field find">
       <div>
         <input type="text" id="name">
-        <label class="active" for="name">join or create classroom</label>
+        <label class="active class-search" for="name">join or create classroom</label>
       </div>
     </form>
   </div>
@@ -28,18 +28,24 @@
     </div>
     <div class="col s6 info-center">
       <div class="info-box">
-        <ul>
-          <li class="bio">
-            <h5>Bio:<%= @user.bio%></h5>
-          </li>
-        </ul>
+        <div class="media author-box">
+          <div class="media-figure">
+            <?php echo get_avatar( get_the_author_meta('email'), '100' ); ?>
+          </div>
+          <div class="media-body">
+            <h2><?php the_author_posts_link(); ?></h2>
+            <p><%= @user.bio %></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <br>
-  <hr class="user-hr"/>
   <div class="stats">
-    <h4>Achievements / stats:</h4>
+    <h4>Achievements:</h4>
+    <div>
+      <hr class="user-hr"/>
+    </div>
     <ul class="specific-stats">
       <li class="bio">User Since:
         <%= @user.created_at.strftime("%B %d, %Y") %></li>

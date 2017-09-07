@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170906192114) do
 
   create_table "posts", force: :cascade do |t|
     t.bigint "user_id"
+    t.bigint "topic_id"
     t.string "name"
     t.string "description"
     t.string "url"
@@ -32,7 +33,24 @@ ActiveRecord::Schema.define(version: 20170906192114) do
     t.string "content"
     t.integer "cached_votes_up", default: 0
     t.index ["cached_votes_up"], name: "index_posts_on_cached_votes_up"
+    t.index ["topic_id"], name: "index_posts_on_topic_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_topics", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "topic_id"
+    t.index ["topic_id"], name: "index_user_topics_on_topic_id"
+    t.index ["user_id"], name: "index_user_topics_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -65,4 +83,6 @@ ActiveRecord::Schema.define(version: 20170906192114) do
     t.index ["voter_type", "voter_id"], name: "index_votes_on_voter_type_and_voter_id"
   end
 
+  add_foreign_key "user_topics", "topics"
+  add_foreign_key "user_topics", "users"
 end

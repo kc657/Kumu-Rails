@@ -1,4 +1,3 @@
-
 #### Inspiration:
 Our dear founder demanded a way for students to share their class notes with each other. Then he left to go work on something else.
 
@@ -9,10 +8,13 @@ ____
 **Kumu** - a peer-reviewed note-sharing platform for students.
 Visit [Kumu](http://kumuapp.herokuapp.com/)
 ____
+
 **Wire Frames**
 
 ![Wireframes](http://i.imgur.com/KXPbFG3.jpg)
-___
+
+--------------------------------------------------------------------------------
+
 **User Stories**
 * The User:
 	* A student who joins a classroom to learn their specific topic. After a lecture, students share their notes and feedback with eachother.
@@ -23,25 +25,31 @@ ___
 
 ![Kumu ERD](http://i.imgur.com/xtV36jX.jpg "ERD")
 
-___
-#### Core Tech
-Ruby on Rails
-PostgreSQL
-Hosted on Heroku
+--------------------------------------------------------------------------------
+
+# Core Tech
+
+Ruby on Rails PostgreSQL Hosted on Heroku
 
 **Required Gems:**
+
 - `acts_as_votable`
 - `paperclip`
-- ` materialize`
+- `materialize`
 - `redcarpet`
 - `coderay`
 - `bcrypt`
-___ 
-### Challenges
+
+--------------------------------------------------------------------------------
+
+## Challenges
+
 - Thumbs_up Gem didn't work for voting, had to try another.
 - DB structure, associating posts with topics.
-____
-### Future Development
+
+--------------------------------------------------------------------------------
+
+## Future Development
 
 - Tagging System for Posts
 - Text-based search for post content

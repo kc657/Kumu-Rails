@@ -2,7 +2,7 @@
 <div class="red-text"><%= msg %></div>
 <% end %>
 <%= yield %>
-<%= form_for :post, url: "/posts", method: "post" do |f| %>
+<%= form_for :post, url: "/topics/:id/posts", method: "post" do |f| %>
 <div class="grey lighten-4 z-depth-3">
   <div class="container">
     <h3 class="center-align">Create New Post</h3>
@@ -12,6 +12,7 @@
     <%= f.text_field :description %>
     <h5>Link:</h5>
     <%= f.text_field :url %>
+    <% f.number_field :topic_id, :value => params[:id].to_i%>
     <h5>Content:</h5>
     <%= f.text_area :content, class:"materialize-textarea"%>
     <div class="center-align">
@@ -21,3 +22,4 @@
   </div>
 </div>
 <% end %>
+<%= console %>
