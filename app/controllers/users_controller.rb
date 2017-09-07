@@ -13,8 +13,14 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    login(@user)
-    redirect_to @user
+
+    if @user.save
+      login(@user)
+      redirect_to @user
+    else
+      redirect_to home_path
+    end
+
   end
 
   def show
@@ -24,7 +30,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find_by_id(params[:id])
-    
+
   end
 
   def update
