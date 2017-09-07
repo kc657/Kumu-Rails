@@ -15,7 +15,7 @@ ____
 ___
 **User Stories**
 * The User:
-	* A student who joins a classroom to learn a specific topic. After a lecture, students share their notes and feedback with eachother.
+	* A student who joins a classroom to learn their specific topic. After a lecture, students share their notes and feedback with eachother.
 	* Students interact with each other's notes through comments and up / down voting. Additionally the App will feature the ability to create an account, have custom information on a user profile, and keep track of user stats.
 	* Students can join multiple topics/classrooms.
 ___
