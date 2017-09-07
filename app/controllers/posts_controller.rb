@@ -4,7 +4,11 @@ class PostsController < ApplicationController
   # user = User.find_by_username(params[:username])
   # if user && user.authenticate(params[:password])
   def index
-    @posts = Post.all
+    @posts = Post.order(cached_votes_up: :desc)
+  end
+
+  def date_sort
+    @posts = Post.order(created_at: :desc)
   end
 
   def new
@@ -55,13 +59,15 @@ class PostsController < ApplicationController
   def upvote
     @post = Post.find(params[:id])
     @post.upvote_by current_user
-    redirect_to posts_path
+    session[:return_to] ||= request.referer
+    redirect_to session.delete(:return_to)
   end
 
   def downvote
     @post = Post.find(params[:id])
     @post.downvote_by current_user
-    redirect_to posts_path
+    session[:return_to] ||= request.referer
+    redirect_to session.delete(:return_to)
   end
 
   def set_topic

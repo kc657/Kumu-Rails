@@ -1,26 +1,32 @@
-<div class="container">
-  <div class="row">
-    <div class="col m6 offset-m3">
-      <h4>welcome back to</h4>
-      <h1>
-        <strong>KUMU</strong>
-      </h1>
-      <br>
-      <hr>
-      Log In
-      <hr>
-      <br>
-    </div>
-    <div class="col m6 offset-m3">
-      <%= form_for @user, url: "/sessions", method: "post" do |f| %>
-      <div>
-        <%= f.text_field :username, placeholder: "Email" %>
+<div class="container grey lighten-4 z-depth-3">
+  <div class="row col m6">
+    <div class="col m10 offset-m1">
+      <div class="center">
+        <br />
+        <h2>Welcome Back</h2>
+        <br />
+        <div>
+          <img src="http://i.imgur.com/792lpez.jpg?2" class="z-depth-3" />
+        </div>
+        <br>
       </div>
-      <div>
-        <%= f.password_field :password, placeholder: "Password" %>
+      <div class="col m6 offset-m3">
+        <%= form_for @user, url: "/sessions", method: "post" do |f| %>
+        <div>
+          <%= f.text_field :username, placeholder: "Email" %>
+        </div>
+        <div>
+          <%= f.password_field :password, placeholder: "Password" %>
+        </div>
+        <div class="center-align">
+          <%= f.submit "Kumu Up", class:"btn-flat grey lighten-2" %>
+          <% end %>
+          <p>
+              <br />
+          </p>
+        </div>
       </div>
-      <%= f.submit "Kumu In" %>
-      <% end %>
+      <br />
     </div>
   </div>
 </div>

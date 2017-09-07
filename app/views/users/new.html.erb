@@ -1,14 +1,14 @@
-<div class="container">
+<div class="container grey lighten-4 z-depth-3">
   <div class="row">
-    <div class="col m6 offset-m3">
-      <h4>thanks for choosing</h4>
-      <h1>
-        <strong>KUMU</strong>
-      </h1>
-      <br>
-      <hr>
-      Sign Up
-      <hr>
+    <div class="col m10 offset-m1">
+      <div class="center">
+        <br />
+        <h3>Welcome to <strong>KUMU</strong></h3>
+        <br />
+      </div>
+      <div class="center">
+        <img src="http://i.imgur.com/792lpez.jpg?2" class="z-depth-3" />
+      </div>
       <br>
       <%= form_for @user do |f| %>
       <div>
@@ -26,8 +26,11 @@
       <div>
         <%= f.text_field :bio, placeholder: "Bio" %>
       </div>
-      <%= f.submit "Kumu Up" %>
-      <% end %>
+      <div class="center-align">
+        <%= f.submit "Kumu Up", class:"btn-flat grey lighten-2" %>
+        <% end %>
+      </div>
+      <br />
     </div>
   </div>
 </div>
