@@ -23,12 +23,14 @@ class TopicsController < ApplicationController
   end
 
   def show
+    # use it or lose it
     topic_id = params[:id]
     @topic = Topic.find_by_id(params[:id])
     @posts = @topic.posts
     render :show
   end
 
+  # use it or lose it
   # def edit
   #   topic_id = params[:id]
   #   @topic = Topic.find_by_id(params[:id]

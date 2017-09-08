@@ -3,6 +3,10 @@ class PostsController < ApplicationController
   # :current_user
   # user = User.find_by_username(params[:username])
   # if user && user.authenticate(params[:password])
+
+  # can you combine both of these separate functions into one that takes an argument?
+  # can you move these out into the models file?
+
   def index
     @posts = Post.order(cached_votes_up: :desc)
   end
@@ -20,11 +24,14 @@ class PostsController < ApplicationController
     post = Post.new(post_params)
     post[:user_id] = current_user.id
     # post[:topic_id] = params[:id].to_i
+
+    # remove console displays from production code
     puts post.inspect
 
     if post.save
       redirect_to post_path(post)
     else
+      # remove console displays from production code
       puts post.errors.messages
       flash[:notice]=post.errors.messages
       render :new

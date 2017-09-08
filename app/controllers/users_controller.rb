@@ -29,6 +29,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    # i can access this action if I am not the user in the parameter
     @user = User.find_by_id(params[:id])
 
   end

@@ -1,5 +1,5 @@
 # Example Classroom Entry
-Classroom.create({name: "Ruby Gems", description: "Best explanations of the top ruby plugins and add-ons"})
+Topic.create({name: "Ruby Gems", description: "Best explanations of the top ruby plugins and add-ons"})
 
 Post.create({name: "Paperclip", description: "Paperclip is a popular Ruby gem for attaching files to resources in a Rails App using ActiveRecord", url: "https://github.com/thoughtbot/paperclip", content:"##Ruby Gem: Paperclip, by thoughtbot
 
